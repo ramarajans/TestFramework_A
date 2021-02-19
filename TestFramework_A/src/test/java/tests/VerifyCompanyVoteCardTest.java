@@ -29,6 +29,8 @@ import utils.Helper;
 
 public class VerifyCompanyVoteCardTest extends BaseTest{
 
+	//Test Commit display
+	
 	/*
 	 * VerifyCompanyVoteCardPage companyVoteCardVeri = null;
 	 * 
