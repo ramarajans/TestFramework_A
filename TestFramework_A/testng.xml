@@ -6,7 +6,10 @@
 	</listeners>
 	<test name="Glass Lewis">
 		<classes>
-			<class name="tests.VerifyCountryFilterTest" />
+			
+			<!-- <class name="tests.VerifyCountryFilterTest" /> -->
+			<class name="tests.VerifyCompanyVoteCardTest" />
+			
 		</classes>
 	</test> <!-- Test1 -->
 </suite> <!-- Suite1 -->

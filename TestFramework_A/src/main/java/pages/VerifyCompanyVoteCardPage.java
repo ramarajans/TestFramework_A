@@ -16,26 +16,24 @@ public class VerifyCompanyVoteCardPage {
 
 	By searchCountryFilterBy = By.id("txt-multiselect-static-search-CountryFilter");
 
-	//label[text()='Belgium']//parent::div
-	//label[text()='Belgium']//preceding-sibling::input
-	@FindBy(xpath="//label[text()='Belgium']//parent::div")
-	WebElement searchCountry_Belgium_Checkbox;
-
-	@FindBy(id="btn-update")
-	WebElement searchCountryFilter_UpdateBtn;
-
-	@FindBy(xpath="//div[@class='k-grid-header-wrap k-auto-scrollable']//table")
-	WebElement countryHeaderTbl;
-
-	String headerTblXpath = "//div[@class='k-grid-header-wrap k-auto-scrollable']//table";
-	By headerTbl = By.xpath(headerTblXpath);
+	@FindBy(xpath="//fieldset[@class='fieldset-county']//following-sibling::div//button[@id='btn-close']") 
+	WebElement searchCountryFilterReset;
 	
-	@FindBy(xpath="//div[@class='k-grid-content k-auto-scrollable']//table")
-	WebElement countryContentTbl;
-
-	String contentTblXpath = "//div[@class='k-grid-content k-auto-scrollable']//table";
-	By contentTbl = By.xpath(contentTblXpath);
+	@FindBy(xpath="//span[@class='k-dropdown-wrap k-state-default']/span[@class='k-select']") 
+	WebElement itemsPerPageArrow;
 	
+	@FindBy(xpath="//ul[@class='k-list k-reset']/li[text()='150']") 
+	WebElement itemsPerPage;
+	
+	@FindBy(xpath="//a[text()='Activision Blizzard Inc']") 
+	WebElement activisionLink;
+	
+	By activisionLinkBy = By.xpath("//a[text()='Activision Blizzard Inc']");
+
+	@FindBy(xpath="//h2[text()='Activision Blizzard Inc']") 
+	WebElement activisionBanner;
+	
+	By activisionBannerBy = By.xpath("//h2[text()='Activision Blizzard Inc']");
 	
 	GenericUtils genUtils = new GenericUtils();
 	private WebDriver driver=null;
@@ -51,51 +49,35 @@ public class VerifyCompanyVoteCardPage {
 		genUtils.checkFieldExist(searchCountryFilterBy, true, "Country Filter Search");
 	}
 
-	public void enterCountryFieldValue(String country)throws Exception{
+	public void clickCountryFilterResetButton()throws Exception{
 
-		genUtils.type(searchCountryFilter, country, "Country Filter Search");
-
+		genUtils.click(searchCountryFilterReset, "Country Reset button");
 	}
+	
+	public void clickItemsPerPageArrow()throws Exception{
 
-	public void selectcountryCheckbox(String country)throws Exception{
-
-		driver.findElement(By.xpath("//label[text()='"+country+"']//parent::div")).click();
-		//genUtils.actionsClick(searchCountry_Belgium_Checkbox, "Belgium country checkbox");
-
+		genUtils.click(itemsPerPageArrow, "Items per page arrow icon");
 	}
+	
+	public void clickOnMaximumNumber()throws Exception{
 
-	public void clickUpdateButton()throws Exception{
-
-		genUtils.click(searchCountryFilter_UpdateBtn, "Update Button");
-
+		genUtils.click(itemsPerPage, "Items per page maximum number");
 	}
-	public boolean verifyCountryValuesFiltered(String country) throws Exception {
+	
+	
+	public void checkCompanyNameActivision()throws Exception{
 
-		boolean isCountryFilterWorking = true;
-		int columnNumber_Country = genUtils.getColumnNumber(headerTblXpath, "Country");
+		genUtils.checkFieldExist(activisionLinkBy, true, "Company Name Activision");
+	}
+	
+	public void clickOnCompanyNameActivision()throws Exception{
 
-		System.out.println("headerTblXpath ==> "+headerTblXpath);
-		System.out.println("contentTblXpath ==> "+contentTblXpath);
-		System.out.println("columnNumber_Country : "+columnNumber_Country);
-		
-		int rowCount = genUtils.getRowCount(contentTblXpath);
-		System.out.println("rowCount : "+rowCount);
-		
-		String cellValueCountry = null;
+		genUtils.click(activisionLink, "Activision Blizzard Inc");
+	}
+	
+	
+	public void checkCompanyNameBanner()throws Exception{
 
-		for(int g=1;g<=rowCount;g++){
-
-			cellValueCountry = driver.findElement(By.xpath(contentTblXpath+"//tr["+g+"]/td["+columnNumber_Country+"]")).getText();
-			//cellValueCountry = genUtils.getTableCellValue(contentTblXpath+"//tr["+g+"]/td["+columnNumber_Country+"]");
-			if(!country.equals(cellValueCountry)) {
-				isCountryFilterWorking = false;
-				System.out.println("Expected Country Value -> "+country);
-				System.out.println("Country value present in table -> "+cellValueCountry);
-				break;
-			}
-
-		}
-
-		return isCountryFilterWorking;
+		genUtils.checkFieldExist(activisionLinkBy, true, "Company Name Activision");
 	}
 }
