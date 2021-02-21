@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Platform_Suite" class="navigator-link">
-              <span class="suite-name border-failed">Platform Suite</span>
+              <span class="suite-name border-passed">Platform Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,40 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Platform_Suite" class="hide-methods failed suite-Platform_Suite"> (hide)</a> <!-- hide-methods failed suite-Platform_Suite -->
-                      <a href="#" panel-name="suite-Platform_Suite" class="show-methods failed suite-Platform_Suite"> (show)</a> <!-- show-methods failed suite-Platform_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Platform_Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Platform_Suite" title="tests.VerifyCountryFilterTest" class="method navigator-link" hash-for-method="verifyCountryFilterTest(chrome, BelgiumTest)">verifyCountryFilterTest(chrome, BelgiumTest)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Platform_Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Platform_Suite" class="hide-methods passed suite-Platform_Suite"> (hide)</a> <!-- hide-methods passed suite-Platform_Suite -->
-                      <a href="#" panel-name="suite-Platform_Suite" class="show-methods passed suite-Platform_Suite"> (show)</a> <!-- show-methods passed suite-Platform_Suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Platform_Suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Platform_Suite" title="tests.VerifyCountryFilterTest" class="method navigator-link" hash-for-method="verifyCountryFilterTest(chrome-headless, Belgium)">verifyCountryFilterTest(chrome-headless, Belgium)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Platform_Suite" title="tests.VerifyCountryFilterTest" class="method navigator-link" hash-for-method="verifyCountryFilterTest(firefox, Germany)">verifyCountryFilterTest(firefox, Germany)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Platform_Suite -->
+                    <span class="method-stats">0 methods,   </span>
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -138,72 +105,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Platform_Suite" class="panel Platform_Suite">
-          <div class="suite-Platform_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.VerifyCountryFilterTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCountryFilterTest(chrome, BelgiumTest)">
-                  </a> <!-- verifyCountryFilterTest(chrome, BelgiumTest) -->
-                  <span class="method-name">verifyCountryFilterTest</span>
-                  <span class="parameters">(chrome, BelgiumTest)</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[text()=&apos;BelgiumTest&apos;]//parent::div&quot;}
-  (Session info: chrome=88.0.4324.182)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;W-7FM3M13&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.9.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\I341067\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:59882}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 310dc1313210378d3e7c21847ce68181
-*** Element info: {Using=xpath, value=//label[text()=&apos;BelgiumTest&apos;]//parent::div}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pages.VerifyCountryFilterPage.selectcountryCheckbox(VerifyCountryFilterPage.java:63)
-	at tests.VerifyCountryFilterTest.verifyCountryFilterTest(VerifyCountryFilterTest.java:47)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-... Removed 16 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Platform_Suite-class-failed -->
-          <div class="suite-Platform_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.VerifyCountryFilterTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCountryFilterTest(chrome-headless, Belgium)">
-                  </a> <!-- verifyCountryFilterTest(chrome-headless, Belgium) -->
-                  <span class="method-name">verifyCountryFilterTest</span>
-                  <span class="parameters">(chrome-headless, Belgium)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCountryFilterTest(firefox, Germany)">
-                  </a> <!-- verifyCountryFilterTest(firefox, Germany) -->
-                  <span class="method-name">verifyCountryFilterTest</span>
-                  <span class="parameters">(firefox, Germany)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Platform_Suite-class-passed -->
         </div> <!-- panel Platform_Suite -->
         <div panel-name="test-xml-Platform_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -219,7 +120,7 @@ Session ID: 310dc1313210378d3e7c21847ce68181
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; parallel=&quot;methods&quot; name=&quot;Glass Lewis&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.VerifyCountryFilterTest&quot;/&gt;
+      &lt;class name=&quot;tests.VerifyCompanyVoteCardTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Glass Lewis --&gt;
 &lt;/suite&gt; &lt;!-- Platform Suite --&gt;
@@ -259,24 +160,12 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
-data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyCountryFilterTest')
-data.setCell(0, 2, 'tests.VerifyCountryFilterTest')
-data.setCell(0, 3, 29308);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyCountryFilterTest')
-data.setCell(1, 2, 'tests.VerifyCountryFilterTest')
-data.setCell(1, 3, 26527);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyCountryFilterTest')
-data.setCell(2, 2, 'tests.VerifyCountryFilterTest')
-data.setCell(2, 3, 24918);
+data.addRows(0);
 window.suiteTableData['Platform_Suite']= { tableData: data, tableDiv: 'times-div-Platform_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-Platform_Suite">
               </div> <!-- times-div-Platform_Suite -->
             </div> <!-- times-div -->
@@ -302,52 +191,14 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.VerifyCountryFilterTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.VerifyCompanyVoteCardTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">1241 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verifyCountryFilterTest(chrome, BelgiumTest)</span>
-                <span class="method-start">1243 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">26832 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">27956 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyCountryFilterTest(firefox, Germany)</span>
-                <span class="method-start">27956 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">57414 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">62057 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyCountryFilterTest(chrome-headless, Belgium)</span>
-                <span class="method-start">62063 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">88807 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">89488 ms</span>
+                <span class="method-start">919 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

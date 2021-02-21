@@ -6,15 +6,15 @@
   </listeners>
   <test thread-count="5" parallel="methods" name="Glass Lewis(failed)">
     <classes>
-      <class name="tests.VerifyCountryFilterTest">
+      <class name="tests.VerifyCompanyVoteCardTest">
         <methods>
-          <include name="verifyCountryFilterTest" invocation-numbers="0"/>
-          <include name="beforeSuite"/>
           <include name="afterMethod"/>
+          <include name="beforeSuite"/>
+          <include name="verifyCompanyVoteCardTest"/>
           <include name="afterSuite"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- tests.VerifyCountryFilterTest -->
+      </class> <!-- tests.VerifyCompanyVoteCardTest -->
     </classes>
   </test> <!-- Glass Lewis(failed) -->
 </suite> <!-- Failed suite [Platform Suite] -->
