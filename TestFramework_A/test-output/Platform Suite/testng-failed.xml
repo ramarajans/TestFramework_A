@@ -10,7 +10,7 @@
         <methods>
           <include name="afterMethod"/>
           <include name="beforeSuite"/>
-          <include name="verifyCompanyVoteCardTest"/>
+          <include name="verifyCompanyVoteCardTest" invocation-numbers="0 1 2"/>
           <include name="afterSuite"/>
           <include name="beforeMethod"/>
         </methods>

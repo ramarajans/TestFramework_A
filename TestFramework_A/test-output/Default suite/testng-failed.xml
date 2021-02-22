@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.VerifyCountryFilterTest">
+      <class name="tests.VerifyCompanyVoteCardTest">
         <methods>
-          <include name="signUpConversationalAI" invocation-numbers="0 1"/>
-          <include name="beforeSuite"/>
           <include name="afterMethod"/>
+          <include name="beforeSuite"/>
+          <include name="verifyCompanyVoteCardTest" invocation-numbers="1"/>
           <include name="afterSuite"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- tests.VerifyCountryFilterTest -->
+      </class> <!-- tests.VerifyCompanyVoteCardTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
