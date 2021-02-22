@@ -56,6 +56,15 @@ public class GenericUtils {
 		}
 	}
 
+
+	public void pageScroll(WebElement ele)throws Exception{
+
+		JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
+
+		js.executeScript("arguments[0].scrollIntoView();", ele);
+	}
+
+
 	/***
 	 * Method to click on an element using Actions class
 	 * @param ele
@@ -69,7 +78,7 @@ public class GenericUtils {
 			System.out.println(fieldName+ " is clicked successfully"); 
 		}
 		catch (Exception e) {
-			
+
 			Assert.fail("Click on "+fieldName+ " failed");
 		}
 	}
@@ -88,7 +97,7 @@ public class GenericUtils {
 			System.out.println("Entered text - "+value+" in "+fieldName+ " successfully");
 
 		}catch (Exception e) {
-			 
+
 			Assert.fail("Inputting text - "+value+" in "+fieldName+ " failed");
 		}
 	}
@@ -186,6 +195,31 @@ public class GenericUtils {
 					Assert.fail(fieldName+ " does not exist");
 				}
 			}
+
+		}catch (Exception e) {
+
+			Assert.fail("Check field existence of "+fieldName+ " failed");
+
+		}
+
+		return fieldExist;
+	}
+
+	public boolean checkFieldExist(By by, String fieldName)throws Exception{
+
+		boolean fieldExist = false;
+
+		try {
+			DriverManager.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+			if(DriverManager.getDriver().findElements(by).size()!=0)
+				fieldExist = true;
+
+			if(fieldExist)
+				System.out.println(fieldName+ " exists ");
+			else
+				System.out.println(fieldName+ " does not exist");		
+
 
 		}catch (Exception e) {
 
@@ -344,7 +378,7 @@ public class GenericUtils {
 
 		return rowCount;
 	}
-	
+
 	public String getTableCellValue(WebElement tblXpath)throws Exception{
 
 		String cellVal = tblXpath.getText();
@@ -359,4 +393,5 @@ public class GenericUtils {
 		String today = df.format(date);
 		return today;
 	}
+
 }

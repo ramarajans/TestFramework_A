@@ -6,6 +6,7 @@ import java.io.IOException;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -18,21 +19,23 @@ public class VerifyCompanyVoteCardTest extends BaseTest{
 
 	VerifyCompanyVoteCardPage companyVoteCardVeri = null;
 
-	@BeforeMethod public void beforeMethod() {
+	@BeforeMethod 
+	public void beforeMethod() {
 
 	}
 
 	@Test(dataProvider = "data")
-	public void verifyCompanyVoteCardTest(String browser, String country) throws Exception {
+	public void verifyCompanyVoteCardTest(String browser) throws Exception {
 
-		openBrowser(browser); navigateToURL(DriverManager.getDriver(),"https://viewpoint.glasslewis.com/WD/?siteId=DemoClient");
+		openBrowser(browser);
+		navigateToURL(DriverManager.getDriver(),"https://viewpoint.glasslewis.com/WD/?siteId=DemoClient");
 		companyVoteCardVeri = new VerifyCompanyVoteCardPage(DriverManager.getDriver());
 		companyVoteCardVeri.checkCountryFilterExist();
 		companyVoteCardVeri.clickCountryFilterResetButton();
-		companyVoteCardVeri.clickItemsPerPageArrow();
-		companyVoteCardVeri.clickOnMaximumNumber();
-		Thread.sleep(3000);
-		companyVoteCardVeri.checkCompanyNameActivision();
+		
+		boolean isFiledExist = companyVoteCardVeri.checkCompanyNameActivision();
+		Assert.assertEquals(isFiledExist, true);
+		
 		companyVoteCardVeri.clickOnCompanyNameActivision();
 		Thread.sleep(3000);
 		companyVoteCardVeri.checkCompanyNameBanner();
